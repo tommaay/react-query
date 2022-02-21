@@ -35,6 +35,9 @@ export default function Navbar() {
       <Link href="/useposts2">
         <a className={route === "/useposts2" ? "text-orange-500" : ""}>Use posts 2</a>
       </Link>
+      <Link href="/pokemonsearch">
+        <a className={route === "/pokemonsearch" ? "text-orange-500" : ""}>Pokemon search</a>
+      </Link>
     </nav>
   )
 }
