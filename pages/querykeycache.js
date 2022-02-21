@@ -29,8 +29,8 @@ export default function QueryKeyCache() {
     <Layout>
       <>
         {/* This will only make 1 api call */}
-        <Posts queryKey="posts1" />
-        <Posts queryKey="posts1" />
+        <Posts queryKey="posts" />
+        <Posts queryKey="posts" />
       </>
     </Layout>
   )

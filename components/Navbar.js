@@ -29,6 +29,12 @@ export default function Navbar() {
       <Link href="/querykeycache">
         <a className={route === "/querykeycache" ? "text-orange-500" : ""}>Query Key Cache</a>
       </Link>
+      <Link href="/useposts1">
+        <a className={route === "/useposts1" ? "text-orange-500" : ""}>Use posts 1</a>
+      </Link>
+      <Link href="/useposts2">
+        <a className={route === "/useposts2" ? "text-orange-500" : ""}>Use posts 2</a>
+      </Link>
     </nav>
   )
 }
