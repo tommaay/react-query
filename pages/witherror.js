@@ -11,7 +11,7 @@ export default function Home() {
     return axios.get("https://jsonplaceholder.typicode.com/posts").then((res) => res.data)
   })
 
-  console.log(queryInfo)
+  // console.log(queryInfo)
 
   return (
     <div className="max-w-6xl mx-auto border">
