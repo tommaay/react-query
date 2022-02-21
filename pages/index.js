@@ -10,21 +10,16 @@ export default function Home() {
       .then((res) => res.data.slice(0, 10))
   })
 
-  // console.log(queryInfo)
-
   return (
-    <div className="max-w-6xl mx-auto border-2">
-      <Layout>
-        <div className="p-4 text-center w-full">
-          <h1 className="text-xl font-bold mb-4">React Query</h1>
-          {queryInfo.isLoading ? (
-            <p>Loading...</p>
-          ) : (
-            queryInfo.data.map((item) => <p key={item.title}>{item.title}</p>)
-          )}
-          {queryInfo.isFetching && <p className="mt-5 text-gray-700">Updating...</p>}
-        </div>
-      </Layout>
-    </div>
+    <Layout>
+      <div className="p-6 w-full">
+        {queryInfo.isLoading ? (
+          <p>Loading...</p>
+        ) : (
+          queryInfo.data.map((item) => <p key={item.title}>{item.title}</p>)
+        )}
+        {queryInfo.isFetching && <p className="mt-5 text-gray-700">Updating...</p>}
+      </div>
+    </Layout>
   )
 }

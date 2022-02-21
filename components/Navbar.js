@@ -5,7 +5,7 @@ export default function Navbar() {
   const { route } = useRouter()
 
   return (
-    <div className="w-40 border-r-2 p-4">
+    <nav className="w-80 border-r-2 p-6">
       <Link href="/">
         <a className={route === "/" ? "text-orange-500" : ""}>Home</a>
       </Link>
@@ -20,6 +20,6 @@ export default function Navbar() {
       <Link href="/staletime">
         <a className={route === "/staletime" ? "text-orange-500" : ""}>Stale time</a>
       </Link>
-    </div>
+    </nav>
   )
 }
