@@ -26,6 +26,9 @@ export default function Navbar() {
       <Link href="/cachetime">
         <a className={route === "/cachetime" ? "text-orange-500" : ""}>Cache time</a>
       </Link>
+      <Link href="/querykeycache">
+        <a className={route === "/querykeycache" ? "text-orange-500" : ""}>Query Key Cache</a>
+      </Link>
     </nav>
   )
 }
