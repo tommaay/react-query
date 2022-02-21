@@ -6,7 +6,7 @@ export default function Layout({ children }) {
       <h1 className="text-xl font-bold mb-4 text-center">React Query</h1>
       <div className="flex min-h-screen max-w-6xl mx-auto border-2">
         <Navbar />
-        {children}
+        <div className="p-6 w-full">{children}</div>
       </div>
     </div>
   )

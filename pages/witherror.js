@@ -2,7 +2,7 @@ import axios from "axios"
 import { useQuery } from "react-query"
 import Layout from "../components/Layout"
 
-export default function Home() {
+export default function WithError() {
   const queryInfo = useQuery("posts", async () => {
     await new Promise((resolve) => setTimeout(resolve, 1000))
     if (true) {
@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="p-6 w-full">
+      <>
         {queryInfo.isLoading ? (
           <p>Loading...</p>
         ) : queryInfo.isError ? (
@@ -21,7 +21,7 @@ export default function Home() {
         ) : (
           queryInfo.data?.map((item) => <p key={item.title}>{item.title}</p>)
         )}
-      </div>
+      </>
     </Layout>
   )
 }

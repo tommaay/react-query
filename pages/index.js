@@ -12,14 +12,14 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="p-6 w-full">
+      <>
         {queryInfo.isLoading ? (
           <p>Loading...</p>
         ) : (
           queryInfo.data.map((item) => <p key={item.title}>{item.title}</p>)
         )}
         {queryInfo.isFetching && <p className="mt-5 text-gray-700">Updating...</p>}
-      </div>
+      </>
     </Layout>
   )
 }

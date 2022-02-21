@@ -2,7 +2,7 @@ import axios from "axios"
 import { useQuery } from "react-query"
 import Layout from "../components/Layout"
 
-export default function Home() {
+export default function StaleTime() {
   const queryInfo = useQuery(
     "posts",
     async () => {
@@ -18,14 +18,14 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="p-6 w-full">
+      <>
         {queryInfo.isLoading ? (
           <p>Loading...</p>
         ) : (
           queryInfo.data.map((item) => <p key={item.title}>{item.title}</p>)
         )}
         {queryInfo.isFetching && <p className="mt-5 text-gray-700">Updating...</p>}
-      </div>
+      </>
     </Layout>
   )
 }

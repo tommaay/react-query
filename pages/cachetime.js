@@ -2,7 +2,7 @@ import axios from "axios"
 import { useQuery } from "react-query"
 import Layout from "../components/Layout"
 
-export default function NoRefetchOnFocus() {
+export default function CacheTime() {
   const queryInfo = useQuery(
     "posts",
     async () => {
@@ -12,7 +12,7 @@ export default function NoRefetchOnFocus() {
         .then((res) => res.data.slice(0, 10))
     },
     {
-      refetchOnWindowFocus: false,
+      cacheTime: 1000,
     }
   )
 
